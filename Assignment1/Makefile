@@ -1,6 +1,6 @@
 PROJECT = hello
 CXX = g++
-CXXFLAGS = −Wall −Wextra
+CXXFLAGS = -Wall -Wextra
 SRC = main.cpp hello.cpp
 OBJ = $(SRC:.cpp=.o)
 
@@ -8,9 +8,9 @@ OBJ = $(SRC:.cpp=.o)
 
 all: $(PROJECT)
 
-$(PROJECT): $(OBJ)
-	$(CXX) −o $@ $^ $(CXXFLAGS)
+$(PROJECT) : $(OBJ)
+	$(CXX) -o $@ $^ $(CXXFLAGS)
 %.o: %.cpp
-	$(CXX) −c −o $@ $< $(CXXFLAGS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
 clean:
-	rm −f $(OBJ) $(PROJECT)
+	rm -f $(OBJ) $(PROJECT)
