@@ -5,7 +5,7 @@
 ## Description
 Home assingment 1 − extended "Hello, world". First says "
 Hello, World". After this reads a string in a cycle
-and says "Hello, '<string>'!" 
+and says "Hello, 'string'!" 
 ## Build
 make 
 ## Run
