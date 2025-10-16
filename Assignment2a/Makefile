@@ -1,0 +1,22 @@
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -Wextra
+PROJECT = assignment2a
+SRCS = main.cpp
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(PROJECT)
+
+$(PROJECT): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+run: $(PROJECT)
+	./$(PROJECT)
+
+clean:
+	rm -f $(PROJECT) $(OBJS)
+
+.PHONY: all run clean
+
