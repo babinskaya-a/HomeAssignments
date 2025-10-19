@@ -28,7 +28,7 @@ int main() {
 	for (size_t i = 0; i < sizef / 2; i++) {
 		char a = buffer[i];
 		buffer[i] = buffer[sizef - i - 1];
-		buffer[i] = a;
+		buffer[sizef - i - 1] = a;
 	}
 
 	// add reversed file to new one
