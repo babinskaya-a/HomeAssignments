@@ -7,7 +7,7 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(PROJECT)
 
 $(PROJECT): $(OBJS)
-	$(CXX) $(CXXFLSGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
