@@ -8,8 +8,8 @@
 #define TRANSFORMER_H
 
 #include <string>
-#include "Weapon.h"
-#include "Vehicle.h"
+#include "ClassWeapon.h"
+#include "ClassVehicle.h"
 
 
 class Transformer {
