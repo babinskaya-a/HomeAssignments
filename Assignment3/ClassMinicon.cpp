@@ -10,7 +10,7 @@
 Minicon::Minicon(const std::string& name, int strength, int speed, bool ammo,
 		const Weapon& weapon, Vehicle* vehicle,
 		int size, int agility):
-		Transformer(name:"Minicon", strength, speed, ammo, weapon, vehicle),
+		Transformer(name, strength, speed, ammo, weapon, vehicle),
 		size_(size), agility_(agility) {};
 
 //getters
@@ -19,7 +19,7 @@ int Minicon::GetSize() {
 }
 
 int Minicon::GetAgility() {
-	return agility;
+	return agility_;
 }
 
 //setters
@@ -32,6 +32,6 @@ void Minicon::SetAgility(int agility) {
 }
 
 //class method
-std::srting Minicon::HelpAutobot() {
-	return "Help has been provided";
+std::string Minicon::HelpAutobot() {
+	return "help has been provided";
 }

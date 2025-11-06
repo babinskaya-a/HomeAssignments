@@ -27,7 +27,7 @@ class Autobot : public Transformer {
 		std::string ProtectHumans();
 
 	private:
-		const std::string& leader_;
+		std::string leader_;
 		int rescues_;
 };
 

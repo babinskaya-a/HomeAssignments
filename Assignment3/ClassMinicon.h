@@ -7,9 +7,9 @@
 #ifndef MINICON_H
 #define MINICON_H
 
-#include "ClassTransformer"
+#include "ClassTransformer.h"
 
-class Minicon() : public Transformer{
+class Minicon : public Transformer{
 	public:
 		Minicon(const std::string& name, int strength, int speed,
                 bool ammo, const Weapon& weapon, Vehicle* vehicle,
@@ -24,7 +24,7 @@ class Minicon() : public Transformer{
 		void SetAgility(int agility);
 
 		//class method
-		std::string HeltAutobot();
+		std::string HelpAutobot();
 
 	private:
 		int size_;
