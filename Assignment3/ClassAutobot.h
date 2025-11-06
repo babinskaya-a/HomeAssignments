@@ -7,9 +7,9 @@
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 
-#include <ClassTransformer.h>
+#include "ClassTransformer.h"
 
-class Autobot() : public Transformer {
+class Autobot : public Transformer {
 	public:
 		Autobot(const std::string& name, int strength, int speed,
 		bool ammo, const Weapon& weapon, Vehicle* vehicle,
@@ -25,6 +25,10 @@ class Autobot() : public Transformer {
 
 		//class method
 		std::string ProtectHumans();
+
+	private:
+		const std::string& leader_;
+		int rescues_;
 };
 
 #endif

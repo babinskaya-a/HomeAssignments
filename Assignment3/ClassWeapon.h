@@ -9,7 +9,7 @@
 
 #include <string>
 
-class Weapon() {
+class Weapon {
 	public:
 		Weapon(const std::string& name, int power); //constructor
 		~Weapon(); //destructor

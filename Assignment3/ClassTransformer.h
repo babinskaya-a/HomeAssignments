@@ -27,7 +27,7 @@ class Transformer {
 		Vehicle* GetVehicle();
 
 		//setters
-		void SetName(const std::srting& name);
+		void SetName(const std::string& name);
 		void SetStrength(int strength);
 		void SetSpeed(int speed);
 		void SetAmmo(bool ammo);
@@ -36,9 +36,9 @@ class Transformer {
 
 		//class methods
 		std::string Transform();
-		void Fire();
+		std::string Fire();
 
-        privite:
+        private:
                 std::string name_;
                 int strength_;
                 int speed_;

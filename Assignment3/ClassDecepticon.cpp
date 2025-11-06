@@ -10,7 +10,7 @@
 Decepticon::Decepticon(const std::string& name, int strength, int speed, bool ammo,
                 const Weapon& weapon, Vehicle* vehicle,
                 bool dangerous, int kills):
-        Transformer(name:"Decepticon", strength, speed, ammo, weapon, vehicle),
+        Transformer(name, strength, speed, ammo, weapon, vehicle),
         dangerous_(dangerous), kills_(kills) {};
 
 //getters
@@ -32,7 +32,7 @@ void Decepticon::SetKills(int kills) {
 }
 
 //class method
-std::srting Decepticon::Destroy(){
-	return "Everything destroyed";
+std::string Decepticon::Destroy() {
+	return "everything destroyed";
 }
 

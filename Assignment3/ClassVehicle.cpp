@@ -19,14 +19,14 @@ std::string Vehicle::GetType() {
 }
 
 std::string Vehicle::GetColor() {
-	return color_
+	return color_;
 }
 
 //setters
-void Vechile::SetType(const std::string& type) {
+void Vehicle::SetType(const std::string& type) {
 	type_ = type;
 }
 
-void Vechile::SetColor(const std::string& color) {
+void Vehicle::SetColor(const std::string& color) {
         color_ = color;
 }

@@ -10,7 +10,7 @@
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo,
 		const Weapon& weapon, Vehicle* vehicle,
 		const std::string& leader, int rescues):
-	Transformer(name:"Autobot", strength, speed, ammo, weapon, vehicle),
+	Transformer(name, strength, speed, ammo, weapon, vehicle),
 	leader_(leader), rescues_(rescues) {};
 
 //getters
@@ -33,6 +33,6 @@ void Autobot::SetRescues(int rescues) {
 
 //class method
 std::string Autobot::ProtectHumans() {
-	return "Humans protected";
+	return "humans protected";
 }
 

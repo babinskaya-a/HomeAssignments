@@ -35,7 +35,7 @@ Weapon& Transformer::GetWeapon() {
 	return weapon_;
 }
 
-Vehicle* Tramsformer::GetVehicle() {
+Vehicle* Transformer::GetVehicle() {
 	return vehicle_;
 }
 
@@ -69,7 +69,6 @@ std::string Transformer::Transform() {
 	return "transformed";
 }
 
-void Transformer::Fire() {
-	ammo_--;
-	return true;
+std::string Transformer::Fire() {
+	return "atack with fire";
 }

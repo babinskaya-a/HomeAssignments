@@ -7,7 +7,7 @@ PROJECT = test_check
 LIBPROJECT = lib$(PROJECT).a
 TESTPROJECT = test-$(PROJECT)
 
-SRCS = ClassTransformer.cpp, ClassAutobot.cpp, ClassDecepticon.cpp, ClassMinicon.cpp, ClassWeapon.cpp, ClassVehicle.cpp
+SRCS = ClassTransformer.cpp ClassAutobot.cpp ClassDecepticon.cpp ClassMinicon.cpp ClassWeapon.cpp ClassVehicle.cpp
 TEST_SRCS = test_transformer.cpp
 
 OBJS = $(SRCS:.cpp=.o)

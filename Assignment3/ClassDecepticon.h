@@ -9,7 +9,7 @@
 
 #include <string>
 
-class Decepticon() {
+class Decepticon : public Transformer {
 	public:
 		Decepticon(const std::string& name, int strength, int speed,
                 bool ammo, const Weapon& weapon, Vehicle* vehicle,
@@ -27,8 +27,8 @@ class Decepticon() {
 		std::string Destroy();
 
 	private:
-		bool dangerous_
-		int kills_
+		bool dangerous_;
+		int kills_;
 
 };
 

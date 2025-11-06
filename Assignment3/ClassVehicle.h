@@ -9,9 +9,9 @@
 
 #include <string>
 
-class Vehicle () {
+class Vehicle {
 	public:
-		Vehicle(const std::string& type, const std::string color); //constructor
+		Vehicle(const std::string& type, const std::string& color); //constructor
 		~Vehicle(); //destructor
 
 		//getters
@@ -20,7 +20,7 @@ class Vehicle () {
 
 		//setters
 		void SetType(const std::string& type);
-		void SetColor(const std::stirng& color);
+		void SetColor(const std::string& color);
 
 	private:
 		std::string type_;
