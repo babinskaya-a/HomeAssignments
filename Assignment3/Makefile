@@ -8,7 +8,7 @@ LIBPROJECT = lib$(PROJECT).a
 TESTPROJECT = test-$(PROJECT)
 
 SRCS = ClassTransformer.cpp ClassAutobot.cpp ClassDecepticon.cpp ClassMinicon.cpp ClassWeapon.cpp ClassVehicle.cpp
-TEST_SRCS = test_transformer.cpp
+TEST_SRCS = test_transformer.cpp test_autobot.cpp test_decepticon.cpp test_minicon.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 TEST_OBJS = $(TEST_SRCS:.cpp=.o)
