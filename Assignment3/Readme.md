@@ -7,6 +7,9 @@ Home assingment 3 is a hierarchy of "Transformers" classes.
 There are two object fields in the main class: 
 1. ClassWeapon weapon_ - **composition**
 2. ClassVehicle vechile_ - **assosiation**
+
+The tests are writen via gtest library.
+
 ## Build
 make 
 ## Test
