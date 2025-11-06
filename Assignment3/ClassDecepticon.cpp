@@ -6,6 +6,7 @@
 
 #include "ClassDecepticon.h"
 
+//constructor
 Decepticon::Decepticon(const std::string& name, int strength, int speed, bool ammo,
                 const Weapon& weapon, Vehicle* vehicle,
                 bool dangerous, int kills):
@@ -13,25 +14,25 @@ Decepticon::Decepticon(const std::string& name, int strength, int speed, bool am
         dangerous_(dangerous), kills_(kills) {};
 
 //getters
-bool GetDangerous() {
+bool Decepticon::GetDangerous() {
 	return dangerous_;
 }
 
-int GetKills() {
+int Decepticon::GetKills() {
 	return kills_;
 }
 
 //setters
-void SetDangerous(bool dangerous) {
+void Decepticon::SetDangerous(bool dangerous) {
 	dangerous_ = dangerous;
 }
 
-void SetKills(int kills) {
+void Decepticon::SetKills(int kills) {
 	kills_ = kills;
 }
 
 //class method
-std::srting Destroy(){
+std::srting Decepticon::Destroy(){
 	return "Everything destroyed";
 }
 

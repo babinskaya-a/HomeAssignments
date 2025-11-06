@@ -6,13 +6,11 @@
 
 #include "ClassTransformer.h"
 
-Transformer::Transformer(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon, Vehicle* vehicle):
-	name_(name),
-	strength_(strength),
-	speed_(speed),
-	ammo_(ammo),
-	weapon_(weapon),
-	vehicle_(vehicle) {};
+//constructor
+Transformer::Transformer(const std::string& name, int strength, int speed,
+		bool ammo, const Weapon& weapon, Vehicle* vehicle):
+		name_(name), strength_(strength), speed_(speed),
+		ammo_(ammo), weapon_(weapon), vehicle_(vehicle) {};
 
 Transformer::~Transformer() {};
 
@@ -33,6 +31,14 @@ bool Transformer::GetAmmo() {
         return ammo_;
 }
 
+Weapon& Transformer::GetWeapon() {
+	return weapon_;
+}
+
+Vehicle* Tramsformer::GetVehicle() {
+	return vehicle_;
+}
+
 //setters
 void Transformer::SetName(const std::string& name){
 	name_ = name;
@@ -50,7 +56,13 @@ void Transformer::SetAmmo(bool ammo){
         ammo_ = ammo;
 }
 
+void Transformer::SetWeapon(const Weapon& weapon) {
+	weapon_ = weapon;
+}
 
+void Transformer::SetVehicle(Vehicle* vehicle) {
+	vehicle_ = vehicle;
+}
 
 //class methods
 std::string Transformer::Transform() {

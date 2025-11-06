@@ -6,9 +6,11 @@
 
 #include "ClassWeapon.h"
 
+//constructor
 Weapon::Weapon(const std::string& name, int power):
-	name_(name),
-	power_(power) {};
+	name_(name), power_(power) {};
+
+//destructor
 Weapon::~Weapon(){};
 
 //getters

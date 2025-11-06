@@ -14,7 +14,8 @@
 
 class Transformer {
         public:
-                Transformer(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon, Vehicle* vehicle); //constructor
+                Transformer(const std::string& name, int strength, int speed,
+		bool ammo, const Weapon& weapon, Vehicle* vehicle); //constructor
                 virtual ~Transformer(); //destructor
 
                //getters
@@ -22,13 +23,16 @@ class Transformer {
 		int GetStrength();
 		int GetSpeed();
 		bool GetAmmo();
+		Weapon& GetWeapon();
+		Vehicle* GetVehicle();
 
 		//setters
 		void SetName(const std::srting& name);
 		void SetStrength(int strength);
 		void SetSpeed(int speed);
 		void SetAmmo(bool ammo);
-		// ? void SetWeapon();
+		void SetWeapon(const Weapon& weapon);
+		void SetVehicle(Vehicle* vehicle);
 
 		//class methods
 		std::string Transform();

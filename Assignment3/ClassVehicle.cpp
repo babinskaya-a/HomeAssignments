@@ -6,7 +6,11 @@
 
 #include "ClassVehicle.h"
 
-Vehicle::Vehicle(const std::string& type, const std::string& color): type_(type), color_(color) {};
+//constructor
+Vehicle::Vehicle(const std::string& type, const std::string& color):
+		type_(type), color_(color) {};
+
+//destructor
 Vehicle::~Vehicle() {};
 
 //getters

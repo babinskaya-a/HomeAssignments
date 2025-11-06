@@ -6,6 +6,7 @@
 
 #include "ClassAutobot.h"
 
+//constructor
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo,
 		const Weapon& weapon, Vehicle* vehicle,
 		const std::string& leader, int rescues):

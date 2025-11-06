@@ -7,7 +7,7 @@
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
-#include <srting>
+#include <string>
 
 class Vehicle () {
 	public:
