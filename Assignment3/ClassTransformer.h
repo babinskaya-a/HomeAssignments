@@ -10,13 +10,21 @@
 #include <string>
 #include "ClassWeapon.h"
 #include "ClassVehicle.h"
+#include <iostream>
 
 
 class Transformer {
+
+	friend class Autobot;
+	friend class Decepticon;
+	friend class Minicon;
+
         public:
                 Transformer(const std::string& name, int strength, int speed,
 		bool ammo, const Weapon& weapon, Vehicle* vehicle); //constructor
                 virtual ~Transformer(); //destructor
+
+		friend std::ostream& operator<<(std::ostream& os, const Transformer& t); //output
 
                //getters
                 std::string GetName();
@@ -35,8 +43,9 @@ class Transformer {
 		void SetVehicle(Vehicle* vehicle);
 
 		//class methods
-		std::string Transform();
-		std::string Fire();
+		virtual void Transform() = 0; //puerly virtual method
+		virtual void Fire();
+		virtual void Speak();
 
         private:
                 std::string name_;

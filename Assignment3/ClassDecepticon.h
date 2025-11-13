@@ -15,6 +15,8 @@ class Decepticon : public Transformer {
                 bool ammo, const Weapon& weapon, Vehicle* vehicle,
                 bool dangerous, int kills); //constructor
 
+		friend std::ostream& operator<<(std::ostream& os, const Decepticon& d);
+
 		//getters
 		bool GetDangerous();
 		int GetKills();
@@ -25,6 +27,9 @@ class Decepticon : public Transformer {
 
 		//class method
 		std::string Destroy();
+		void Transfrom() override;
+		void Speak() override;
+		void Fire() override;
 
 	private:
 		bool dangerous_;

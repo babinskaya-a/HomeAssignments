@@ -15,6 +15,8 @@ class Autobot : public Transformer {
 		bool ammo, const Weapon& weapon, Vehicle* vehicle,
 		const std::string& leader, int rescues); //constructor
 
+		friend std::ostream& operator<<(std::ostream& os, const Autobot& a);
+
 		//getters
 		std::string GetLeader();
 		int GetRescues();
@@ -25,6 +27,9 @@ class Autobot : public Transformer {
 
 		//class method
 		std::string ProtectHumans();
+		void Transform() override;
+		void Speak() override;
+		void Fire() override;
 
 	private:
 		std::string leader_;

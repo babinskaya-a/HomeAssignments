@@ -12,7 +12,15 @@ Transformer::Transformer(const std::string& name, int strength, int speed,
 		name_(name), strength_(strength), speed_(speed),
 		ammo_(ammo), weapon_(weapon), vehicle_(vehicle) {};
 
+//destrudtor
 Transformer::~Transformer() {};
+
+//output
+std::ostream& operator<<(std::ostream& os, const Transformer& t) {
+	os << "name:" << t.name_ << ", strength:" << t.strength_ << ", speed:" << t.speed_
+	<< ", ammo:" << t.ammo_ << ", weapon:" << t.weapon_ << ", vehicle:" << t.vehicle_ << "\n";
+	return os;
+}
 
 //getters
 std::string Transformer::GetName() {
@@ -65,10 +73,11 @@ void Transformer::SetVehicle(Vehicle* vehicle) {
 }
 
 //class methods
-std::string Transformer::Transform() {
-	return "transformed";
+void Transformer::Fire() override {
+	std::cout << "Transformer::Fire() from ClassTransformer\n";
 }
 
-std::string Transformer::Fire() {
-	return "atack with fire";
+void Transformer::Speak() override {
+	std::cout << "Transfomer::Speak() from ClassTransformer\n";
 }
+

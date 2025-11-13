@@ -13,6 +13,14 @@ Decepticon::Decepticon(const std::string& name, int strength, int speed, bool am
         Transformer(name, strength, speed, ammo, weapon, vehicle),
         dangerous_(dangerous), kills_(kills) {};
 
+//output
+std::ostream& operator<<(std::ostream& os, const Decepticon& d) {
+	os << "name:" << d.name_ << ", strength:" << d.strength_ << ", speed:" << d.speed_
+	<< ", ammo:" << d.ammo_ << ", weapon:" << d.weapon_ << ", vehicle:" << d.vehicle_
+	<< ", dangerous:" << d.dangerous_ << ", kills:" << d.kills_ << "\n";
+	return os;
+}
+
 //getters
 bool Decepticon::GetDangerous() {
 	return dangerous_;
@@ -35,4 +43,18 @@ void Decepticon::SetKills(int kills) {
 std::string Decepticon::Destroy() {
 	return "everything destroyed";
 }
+
+void Decepticon::Transfrom() {
+	std::cout << "Decepticon::Transform() from ClassDecepticon";
+}
+
+void Decepticon::Speak() {
+	std::cout << "Decepticon::Speak() from ClassDecepticon";
+}
+
+void Decepticon::Fire() {
+	std::cout << "Decepticon::Fire() from ClassDecepticon";
+}
+
+
 

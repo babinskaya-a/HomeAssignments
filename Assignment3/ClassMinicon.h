@@ -15,6 +15,8 @@ class Minicon : public Transformer{
                 bool ammo, const Weapon& weapon, Vehicle* vehicle,
                 int size, int agility); //constructor
 
+		friend std::ostream& operator<<(std::ostream& os, const Minicon& m); //output
+
 		//getter
 		int GetSize();
 		int GetAgility();
@@ -25,6 +27,9 @@ class Minicon : public Transformer{
 
 		//class method
 		std::string HelpAutobot();
+		void Transform() override;
+		void Speak() override;
+		void Fire() override;
 
 	private:
 		int size_;
