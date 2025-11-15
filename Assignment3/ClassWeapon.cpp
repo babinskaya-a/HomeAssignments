@@ -1,7 +1,7 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignmnent3
+* Assignmnent4
 */
 
 #include "ClassWeapon.h"

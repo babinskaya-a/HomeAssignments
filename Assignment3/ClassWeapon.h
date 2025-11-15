@@ -1,7 +1,7 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignment3
+* Assignment4
 */
 
 #ifndef WEAPON_H

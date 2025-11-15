@@ -1,12 +1,28 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignment3
+* Assignment4
 */
 
 #include "ClassDecepticon.h"
 
 //constructors
+Decepticon::Decepticon():
+	Transformer(), dangerous_(false), kills_(0) {};
+Decepticon::Decepticon(const std::string& name):
+	Transformer(name), dangerous_(false), kills_(0) {};
+Decepticon::Decepticon(const std::string& name, int strength):
+	Transformer(name, strength), dangerous_(false), kills_(0) {};
+Decepticon::Decepticon(const std::string& name, int strength, int speed):
+	Transformer(name, strength, speed), dangerous_(false), kills_(0) {};
+Decepticon::Decepticon(const std::string& name, int strength, int speed, bool ammo):
+	Transformer(name, strength, speed, ammo), dangerous_(false), kills_(0) {};
+Decepticon::Decepticon(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
+		Vehicle* vehicle):
+	Transformer(name, strength, speed, ammo, weapon, vehicle), dangerous_(false), kills_(0) {};
+Decepticon::Decepticon(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
+		Vehicle* vehicle, bool dangerous):
+	Transformer(name, strength, speed, ammo, weapon, vehicle), dangerous_(dangerous), kills_(0) {};
 Decepticon::Decepticon(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
 		Vehicle* vehicle, bool dangerous, int kills):
 	Transformer(name, strength, speed, ammo, weapon, vehicle), dangerous_(dangerous), kills_(kills) {};
