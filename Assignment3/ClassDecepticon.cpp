@@ -6,12 +6,10 @@
 
 #include "ClassDecepticon.h"
 
-//constructor
-Decepticon::Decepticon(const std::string& name, int strength, int speed, bool ammo,
-                const Weapon& weapon, Vehicle* vehicle,
-                bool dangerous, int kills):
-        Transformer(name, strength, speed, ammo, weapon, vehicle),
-        dangerous_(dangerous), kills_(kills) {};
+//constructors
+Decepticon::Decepticon(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
+		Vehicle* vehicle, bool dangerous, int kills):
+	Transformer(name, strength, speed, ammo, weapon, vehicle), dangerous_(dangerous), kills_(kills) {};
 
 //output
 std::ostream& operator<<(std::ostream& os, const Decepticon& d) {

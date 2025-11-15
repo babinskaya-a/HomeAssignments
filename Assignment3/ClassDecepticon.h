@@ -11,9 +11,18 @@
 
 class Decepticon : public Transformer {
 	public:
-		Decepticon(const std::string& name, int strength, int speed,
-                bool ammo, const Weapon& weapon, Vehicle* vehicle,
-                bool dangerous, int kills); //constructor
+		//constructors
+		Decepticon();
+		Decepticon(const std::string& name);
+		Decepticon(const std::string& name, int strength);
+		Decepticon(const std::string& name, int strength, int speed);
+		Decepticon(const std::string& name, int strength, int speed, bool ammo);
+		Decepticon(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
+                Vehicle* vehicle);
+		Decepticon(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
+                Vehicle* vehicle, bool dangerous);
+		Decepticon(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
+		Vehicle* vehicle, bool dangerous, int kills);
 
 		friend std::ostream& operator<<(std::ostream& os, const Decepticon& d);
 
