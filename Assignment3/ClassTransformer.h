@@ -20,9 +20,16 @@ class Transformer {
 	friend class Minicon;
 
         public:
-                Transformer(const std::string& name, int strength, int speed,
-		bool ammo, const Weapon& weapon, Vehicle* vehicle); //constructor
-                virtual ~Transformer(); //destructor
+		//constructors
+		Transformer()
+		Transformer(const std::string& name);
+		Transformer(const std::string& name, int strength);
+		Transformer(const std::string& name, int strength, int speed);
+		Transformer(const std::string& name, int strength, int speed, bool ammo);
+                Transformer(const std::string& name, int strength, int speed, bool ammo,
+		const Weapon& weapon, Vehicle* vehicle);
+		//destructor
+                virtual ~Transformer();
 
 		friend std::ostream& operator<<(std::ostream& os, const Transformer& t); //output
 

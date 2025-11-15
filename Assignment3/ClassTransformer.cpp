@@ -6,11 +6,26 @@
 
 #include "ClassTransformer.h"
 
-//constructor
-Transformer::Transformer(const std::string& name, int strength, int speed,
-		bool ammo, const Weapon& weapon, Vehicle* vehicle):
-		name_(name), strength_(strength), speed_(speed),
-		ammo_(ammo), weapon_(weapon), vehicle_(vehicle) {};
+//constructors
+Transformer::Transformer():
+		name_("Unknown"), strength_(0), speed_(0),ammo_(false),
+		weapon_("laser"), vehicle_("car") {};
+Transformer::Transformer(const std::string& name):
+		name_(name), strength_(0), speed_(0), ammo_(false),
+		weapon_("laser"), vehicle_("car") {};
+Transformer::Transformer(const std::string& name, int strength):
+		name_(name), strength_(strength), speed_(0), ammo_(false),
+		weapon_("laser"), vehicle_("car") {};
+Transformer::Transformer(const std::string& name, int strength, int speed):
+                name_(name), strength_(strength), speed_(speed),
+                ammo_(false), weapon_("laser"), vehicle_("car") {};
+Transformer::Transformer(const std::string& name, int strength, int speed, bool ammo):
+		name_(name), strength_(strength), speed_(speed), ammo_(ammo),
+		weapon_("laser"), vehicle_("car") {};
+Transformer::Transformer(const std::string& name, int strength, int speed, bool ammo,
+		const Weapon& weapon, Vehicle* vehicle):
+		name_(name), strength_(strength), speed_(speed), ammo_(ammo),
+		weapon_(weapon), vehicle_(vehicle) {};
 
 //destrudtor
 Transformer::~Transformer() {};

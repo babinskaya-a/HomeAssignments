@@ -11,9 +11,18 @@
 
 class Autobot : public Transformer {
 	public:
-		Autobot(const std::string& name, int strength, int speed,
-		bool ammo, const Weapon& weapon, Vehicle* vehicle,
-		const std::string& leader, int rescues); //constructor
+		//constructors
+		Autobot();
+		Autobot(const std::string& name);
+		Autobot(const std::string& name, int strength);
+		Autobot(const std::string& name, int strength, int speed);
+		Autobot(const std::string& name, int strength, int speed, bool ammo);
+		Autobot(const std::string& name, int strength, int speed, bool ammo,
+		const Weapon& weapon, Vehicle* vehicle);
+		Autobot(const std::string& name, int strength, int speed, bool ammo,
+		const Weapon& weapon, Vehicle* vehicle, const std::string& leader);
+		Autobot(const std::string& name, int strength, int speed, bool ammo,
+		const Weapon& weapon, Vehicle* vehicle, const std::string& leader, int rescues);
 
 		friend std::ostream& operator<<(std::ostream& os, const Autobot& a);
 
