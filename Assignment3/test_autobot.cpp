@@ -74,51 +74,50 @@ TEST(AutobotTest, HumanProtection) {
 
 
 //constructor tests
-
-TEST(AutobotConstructorTest, ConstructorTestEmpty) {
+TEST(MiniconConstructorTest, ConstructorTestEmpty) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Autobot a();
-        EXPECT_EQ(a.GetName(), "Unknown");
-	EXPECT_EQ(a.GetStrength(), 0);
-	EXPECT_EQ(a.GetSpeed(), 0);
-	EXPECT_FALSE(a.GetAmmo());
-	EXPECT_EQ(t.GetWeapon().GetName(), "laser");
-	EXPECT_EQ(t.GetVehicle()->GetType(), "jet");
-	EXPECT_EQ(t.GetWeapon().GetPower(), 150);
-	EXPECT_EQ(t.GetVehicle()->GetColor(), "red");
-	EXPECT_EQ(a.GetLeader(), "not leader");
-	EXPECT_EG(a.GetRescues(), 0);
+        Minicon();
+        EXPECT_EQ(m.GetName(), "Unknown");
+	EXPECT_EQ(m.GetStrength(), 0);
+	EXPECT_EQ(m.GetSpeed(), 0);
+	EXPECT_FALSE(m.GetAmmo());
+	EXPECT_EQ(m.GetWeapon().GetName(), "laser");
+	EXPECT_EQ(m.GetVehicle()->GetType(), "jet");
+	EXPECT_EQ(m.GetWeapon().GetPower(), 150);
+	EXPECT_EQ(m.GetVehicle()->GetColor(), "red");
+	EXPECT_EQ(m.GetSize(), 50);
+	EXPECT_EG(m.GetAgility(), 30);
 }
 
-TEST(AutobotConstructorTest, ConstructorTestWithoutOneParameter) {
+TEST(MiniconConstructorTest, ConstructorTestWithoutOneParameter) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Autobot a("Optimus Prime", 1000, 200, true, weapon, &vehicle, "leader");
-        EXPECT_EQ(a.GetName(), "Optimus Prime");
-        EXPECT_EQ(a.GetStrength(), 1000);
-        EXPECT_EQ(a.GetSpeed(), 200);
-        EXPECT_TRUE(a.GetAmmo());
-        EXPECT_EQ(t.GetWeapon().GetName(), "laser");
-        EXPECT_EQ(t.GetVehicle()->GetType(), "jet");
-        EXPECT_EQ(t.GetWeapon().GetPower(), 150);
-        EXPECT_EQ(t.GetVehicle()->GetColor(), "red");
-        EXPECT_EQ(a.GetLeader(), "leader");
-        EXPECT_EG(a.GetRescues(), 0);
+        Minicon m("Fixit", 1000, 200, true, weapon, &vehicle, 60);
+        EXPECT_EQ(m.GetName(), "Fixit");
+        EXPECT_EQ(m.GetStrength(), 1000);
+        EXPECT_EQ(m.GetSpeed(), 200);
+        EXPECT_TRUE(m.GetAmmo());
+        EXPECT_EQ(m.GetWeapon().GetName(), "laser");
+        EXPECT_EQ(m.GetVehicle()->GetType(), "jet");
+        EXPECT_EQ(m.GetWeapon().GetPower(), 150);
+        EXPECT_EQ(m.GetVehicle()->GetColor(), "red");
+        EXPECT_EQ(m.GetSize(), 60);
+        EXPECT_EG(m.GetAgility(), 30);
 }
 
-TEST(AutobotConstructorTest, ConstructorTest) {
+TEST(MiniconConstructorTest, ConstructorTest) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Autobot a("Optimus Prime", 1000, 200, true, weapon, &vehicle, "leader", 100);
-        EXPECT_EQ(a.GetName(), "Optimus Prime");
-        EXPECT_EQ(a.GetStrength(), 1000);
-        EXPECT_EQ(a.GetSpeed(), 200);
-        EXPECT_TRUE(a.GetAmmo());
-        EXPECT_EQ(t.GetWeapon().GetName(), "laser");
-        EXPECT_EQ(t.GetVehicle()->GetType(), "jet");
-        EXPECT_EQ(t.GetWeapon().GetPower(), 150);
-        EXPECT_EQ(t.GetVehicle()->GetColor(), "red");
-        EXPECT_EQ(a.GetLeader(), "leader");
-        EXPECT_EG(a.GetRescues(), 100);
+        Miniocon m("Fixit", 1000, 200, true, weapon, &vehicle, 60, 100);
+        EXPECT_EQ(m.GetName(), "Fixit");
+        EXPECT_EQ(m.GetStrength(), 1000);
+        EXPECT_EQ(m.GetSpeed(), 200);
+        EXPECT_TRUE(m.GetAmmo());
+        EXPECT_EQ(m.GetWeapon().GetName(), "laser");
+        EXPECT_EQ(m.GetVehicle()->GetType(), "jet");
+        EXPECT_EQ(m.GetWeapon().GetPower(), 150);
+        EXPECT_EQ(m.GetVehicle()->GetColor(), "red");
+        EXPECT_EQ(m.GetSize(), 60);
+        EXPECT_EG(m.GetAgility(), 100);
 }
