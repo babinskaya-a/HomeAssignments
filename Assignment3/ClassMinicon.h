@@ -11,9 +11,18 @@
 
 class Minicon : public Transformer{
 	public:
-		Minicon(const std::string& name, int strength, int speed,
-                bool ammo, const Weapon& weapon, Vehicle* vehicle,
-                int size, int agility); //constructor
+		//constructors
+		Minicon();
+		Minicon(const std::string& name);
+		Minicon(const std::string& name, int strength);
+		Minicon(const std::string& name, int strength, int speed);
+		Minicon(const std::string& name, int strength, int speed, bool ammo);
+		Minicon(const std::string& name, int strength, int speed, bool ammo,
+                const Weapon& weapon, Vehicle* vehicle,);
+		Minicon(const std::string& name, int strength, int speed, bool ammo,
+                const Weapon& weapon, Vehicle* vehicle, int size);
+		Minicon(const std::string& name, int strength, int speed, bool ammo,
+                const Weapon& weapon, Vehicle* vehicle, int size, int agility);
 
 		friend std::ostream& operator<<(std::ostream& os, const Minicon& m); //output
 
