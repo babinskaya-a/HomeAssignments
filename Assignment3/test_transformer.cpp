@@ -1,7 +1,7 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignmnent3
+* Assignmnent4
 */
 
 #include <gtest/gtest.h>
@@ -9,6 +9,8 @@
 #include "ClassWeapon.h"
 #include "ClassVehicle.h"
 
+
+//getters and setters
 TEST(TransformerTest, GetSet) {
 	Weapon weapon("laser", 150);
 	Vehicle vehicle("jet", "red");
@@ -22,7 +24,6 @@ TEST(TransformerTest, GetSet) {
 	EXPECT_EQ(t.GetVehicle()->GetType(), "jet");
 	EXPECT_EQ(t.GetWeapon().GetPower(), 150);
 	EXPECT_EQ(t.GetVehicle()->GetColor(), "red");
-
 
 	t.SetName("Optimus");
 	t.SetStrength(1500);
@@ -44,14 +45,59 @@ TEST(TransformerTest, GetSet) {
 
 }
 
-TEST(TransformTest, TransformationStatus) {
+//class method
+TEST(TransformTest, SpeakMethodTest) {
 	Weapon weapon("laser", 150);
 	Vehicle vehicle("jet", "red");
 	Transformer t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
-
-	EXPECT_EQ(t.Transform(), "transformed");
-	EXPECT_EQ(t.Fire(), "atack with fire");
+	EXPECT_EQ(t.Speak(), "Transfomer::Speak() from ClassTransformer\n");
 }
 
+TEST(TransformTest, FireMethodTest) {
+        Weapon weapon("laser", 150);
+        Vehicle vehicle("jet", "red");
+        Transformer t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
+        EXPECT_EQ(t.Fire(), "Transfomer::Fire() from ClassTransformer\n");
+}
 
+//constructor tests
+TEST(TransformerConstructorTest, ConstructorTestEmpty) {
+        Weapon weapon("laser", 150);
+        Vehicle vehicle("jet", "red");
+        Tranformer t();
+        EXPECT_EQ(t.GetName(), "Unknown");
+        EXPECT_EQ(t.GetStrength(), 0);
+        EXPECT_EQ(t.GetSpeed(), 0);
+        EXPECT_FALSE(t.GetAmmo());
+        EXPECT_EQ(t.GetWeapon().GetName(), "laser");
+        EXPECT_EQ(t.GetVehicle()->GetType(), "jet");
+        EXPECT_EQ(t.GetWeapon().GetPower(), 100);
+        EXPECT_EQ(t.GetVehicle()->GetColor(), "red");
+}
+
+TEST(TransformerConstructorTest, ConstructorTestWithoutOneParameter) {
+        Transformer t("Optimus Prime", 1000, 200, true);
+        EXPECT_EQ(t.GetName(), "Optimus Prime");
+        EXPECT_EQ(t.GetStrength(), 1000);
+        EXPECT_EQ(t.GetSpeed(), 200);
+        EXPECT_TRUE(t.GetAmmo());
+        EXPECT_EQ(t.GetWeapon().GetName(), "laser");
+        EXPECT_EQ(t.GetVehicle()->GetType(), "jet");
+        EXPECT_EQ(t.GetWeapon().GetPower(), 100);
+	EXPECT_EQ(t.GetVehicle().->GetColor(), "red");
+}
+
+TEST(TransformerConstructorTest, ConstructorTest) {
+        Weapon weapon("laser", 150);
+        Vehicle vehicle("jet", "red");
+        Transformer t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
+        EXPECT_EQ(t.GetName(), "Optimus Prime");
+        EXPECT_EQ(t.GetStrength(), 1000);
+        EXPECT_EQ(t.GetSpeed(), 200);
+        EXPECT_TRUE(t.GetAmmo());
+        EXPECT_EQ(t.GetWeapon().GetName(), "laser");
+        EXPECT_EQ(t.GetVehicle()->GetType(), "jet");
+        EXPECT_EQ(t.GetWeapon().GetPower(), 150);
+        EXPECT_EQ(t.GetVehicle()->GetColor(), "red");
+}
 

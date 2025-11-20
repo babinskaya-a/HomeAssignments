@@ -9,19 +9,19 @@
 //constructors
 Transformer::Transformer():
 		name_("Unknown"), strength_(0), speed_(0),ammo_(false),
-		weapon_("laser"), vehicle_("car") {};
+		weapon_("laser", 100), vehicle_("car", "red") {};
 Transformer::Transformer(const std::string& name):
 		name_(name), strength_(0), speed_(0), ammo_(false),
-		weapon_("laser"), vehicle_("car") {};
+		weapon_("laser", 100), vehicle_("car", "red") {};
 Transformer::Transformer(const std::string& name, int strength):
 		name_(name), strength_(strength), speed_(0), ammo_(false),
-		weapon_("laser"), vehicle_("car") {};
+		weapon_("laser", 100), vehicle_("car", "red") {};
 Transformer::Transformer(const std::string& name, int strength, int speed):
                 name_(name), strength_(strength), speed_(speed),
-                ammo_(false), weapon_("laser"), vehicle_("car") {};
+                ammo_(false), weapon_("laser", 100), vehicle_("car", "red") {};
 Transformer::Transformer(const std::string& name, int strength, int speed, bool ammo):
 		name_(name), strength_(strength), speed_(speed), ammo_(ammo),
-		weapon_("laser"), vehicle_("car") {};
+		weapon_("laser", 100), vehicle_("car", "red") {};
 Transformer::Transformer(const std::string& name, int strength, int speed, bool ammo,
 		const Weapon& weapon, Vehicle* vehicle):
 		name_(name), strength_(strength), speed_(speed), ammo_(ammo),
