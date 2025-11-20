@@ -33,7 +33,7 @@ Transformer::~Transformer() {};
 //output
 std::ostream& operator<<(std::ostream& os, const Transformer& t) {
 	os << "name:" << t.name_ << ", strength:" << t.strength_ << ", speed:" << t.speed_
-	<< ", ammo:" << t.ammo_ << ", weapon:" << t.weapon_ << ", vehicle:" << t.vehicle_ << "\n";
+	<< ", ammo:" << t.ammo_ << ", weapon:" << t.weapon_ << ", vehicle:" << *(t.vehicle_) << "\n";
 	return os;
 }
 
@@ -88,11 +88,11 @@ void Transformer::SetVehicle(Vehicle* vehicle) {
 }
 
 //class methods
-void Transformer::Fire() override {
+void Transformer::Fire() {
 	std::cout << "Transformer::Fire() from ClassTransformer\n";
 }
 
-void Transformer::Speak() override {
+void Transformer::Speak() {
 	std::cout << "Transfomer::Speak() from ClassTransformer\n";
 }
 

@@ -21,7 +21,7 @@ class Transformer {
 
         public:
 		//constructors
-		Transformer()
+		Transformer();
 		Transformer(const std::string& name);
 		Transformer(const std::string& name, int strength);
 		Transformer(const std::string& name, int strength, int speed);
@@ -38,7 +38,7 @@ class Transformer {
 		int GetStrength();
 		int GetSpeed();
 		bool GetAmmo();
-		Weapon& GetWeapon();
+		const Weapon& GetWeapon();
 		Vehicle* GetVehicle();
 
 		//setters
