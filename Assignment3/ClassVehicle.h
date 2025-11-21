@@ -1,14 +1,13 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignment4
+* Assignment3
 */
 
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
 #include <string>
-#include <ostream>
 
 class Vehicle {
 	public:
@@ -16,15 +15,12 @@ class Vehicle {
 		~Vehicle(); //destructor
 
 		//getters
-		std::string GetType() const;
-		std::string GetColor() const;
+		std::string GetType();
+		std::string GetColor();
 
 		//setters
 		void SetType(const std::string& type);
 		void SetColor(const std::string& color);
-
-		//output
-		friend std::ostream& operator<<(std::ostream& os, const Vehicle& vehicle);
 
 	private:
 		std::string type_;
