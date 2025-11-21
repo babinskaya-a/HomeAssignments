@@ -14,7 +14,7 @@
 TEST(TransformerTest, GetSet) {
 	Weapon weapon("laser", 150);
 	Vehicle vehicle("jet", "red");
-	Transformer t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
+	Autobot t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
 
 	EXPECT_EQ(t.GetName(), "Optimus Prime");
 	EXPECT_EQ(t.GetStrength(), 1000);
@@ -29,7 +29,9 @@ TEST(TransformerTest, GetSet) {
 	t.SetStrength(1500);
 	t.SetSpeed(500);
 	t.SetAmmo(false);
-	t.GetWeapon().SetPower(250);
+	Weapon w = t.GetWeapon();
+	w.SetPower(250);
+	t.SetWeapon(w);
 	Vehicle vehicle_2 ("car", "green");
 	t.SetVehicle(&vehicle_2);
 
@@ -47,14 +49,14 @@ TEST(TransformerTest, GetSet) {
 TEST(TransformTest, SpeakMethodTest) {
 	Weapon weapon("laser", 150);
 	Vehicle vehicle("jet", "red");
-	Transformer t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
+	Autobot t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
 	EXPECT_EQ(t.Speak(), "Transfomer::Speak() from ClassTransformer\n");
 }
 
 TEST(TransformTest, FireMethodTest) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Transformer t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
+        Autobot t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
         EXPECT_EQ(t.Fire(), "Transfomer::Fire() from ClassTransformer\n");
 }
 
@@ -62,7 +64,7 @@ TEST(TransformTest, FireMethodTest) {
 TEST(TransformerConstructorTest, ConstructorTestEmpty) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Tranformer t();
+        Autobot t();
         EXPECT_EQ(t.GetName(), "Unknown");
         EXPECT_EQ(t.GetStrength(), 0);
         EXPECT_EQ(t.GetSpeed(), 0);
@@ -74,7 +76,7 @@ TEST(TransformerConstructorTest, ConstructorTestEmpty) {
 }
 
 TEST(TransformerConstructorTest, ConstructorTestWithoutOneParameter) {
-        Transformer t("Optimus Prime", 1000, 200, true);
+        Autobot t("Optimus Prime", 1000, 200, true);
         EXPECT_EQ(t.GetName(), "Optimus Prime");
         EXPECT_EQ(t.GetStrength(), 1000);
         EXPECT_EQ(t.GetSpeed(), 200);
@@ -88,7 +90,7 @@ TEST(TransformerConstructorTest, ConstructorTestWithoutOneParameter) {
 TEST(TransformerConstructorTest, ConstructorTest) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Transformer t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
+        Autobot t("Optimus Prime", 1000, 200, true, weapon, &vehicle);
         EXPECT_EQ(t.GetName(), "Optimus Prime");
         EXPECT_EQ(t.GetStrength(), 1000);
         EXPECT_EQ(t.GetSpeed(), 200);
