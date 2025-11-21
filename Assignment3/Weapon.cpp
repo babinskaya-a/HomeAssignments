@@ -1,23 +1,24 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignmnent4
+* Assignmnent3
 */
 
 #include "Weapon.h"
 
 //constructor
-Weapon::Weapon(const std::string& name, int power): name_(name), power_(power) {}
+Weapon::Weapon(const std::string& name, int power):
+	name_(name), power_(power) {};
 
 //destructor
-Weapon::~Weapon() {}
+Weapon::~Weapon(){};
 
 //getters
-std::string Weapon::GetName() const {
+std::string Weapon::GetName() {
 	return name_;
 }
 
-int Weapon::GetPower() const {
+int Weapon::GetPower() {
 	return power_;
 }
 
@@ -28,10 +29,4 @@ void Weapon::SetName(const std::string& name) {
 
 void Weapon::SetPower(int power) {
 	power_ = power;
-}
-
-//output
-std::ostream& operator<<(std::ostream& os, const Weapon& weapon) {
-	os << "Weapon: " << "name: " << weapon.name_ << ", power: " << weapon.power_ ;
-	return os;
 }

@@ -1,7 +1,7 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignment4
+* Assignment3
 */
 
 #ifndef AUTOBOT_H
@@ -11,24 +11,13 @@
 
 class Autobot : public Transformer {
 	public:
-		//constructors
-		Autobot();
-		Autobot(const std::string& name);
-		Autobot(const std::string& name, int strength);
-		Autobot(const std::string& name, int strength, int speed);
-		Autobot(const std::string& name, int strength, int speed, bool ammo);
-		Autobot(const std::string& name, int strength, int speed, bool ammo,
-		const Weapon& weapon, Vehicle* vehicle);
-		Autobot(const std::string& name, int strength, int speed, bool ammo,
-		const Weapon& weapon, Vehicle* vehicle, const std::string& leader);
-		Autobot(const std::string& name, int strength, int speed, bool ammo,
-		const Weapon& weapon, Vehicle* vehicle, const std::string& leader, int rescues);
-
-		friend std::ostream& operator<<(std::ostream& os, const Autobot& a);
+		Autobot(const std::string& name, int strength, int speed,
+		bool ammo, const Weapon& weapon, Vehicle* vehicle,
+		const std::string& leader, int rescues); //constructor
 
 		//getters
-		std::string GetLeader() const;
-		int GetRescues() const;
+		std::string GetLeader();
+		int GetRescues();
 
 		//setters
 		void SetLeader(const std::string& leader);
@@ -36,9 +25,6 @@ class Autobot : public Transformer {
 
 		//class method
 		std::string ProtectHumans();
-		std::string Transform() override;
-		std::string Speak() override;
-		std::string Fire() override;
 
 	private:
 		std::string leader_;
@@ -46,4 +32,3 @@ class Autobot : public Transformer {
 };
 
 #endif
-
