@@ -1,7 +1,7 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignment 4
+* Assignment4
 */
 
 #include "Transformer.h"
