@@ -35,4 +35,3 @@ void Autobot::SetRescues(int rescues) {
 std::string Autobot::ProtectHumans() {
 	return "humans protected";
 }
-
