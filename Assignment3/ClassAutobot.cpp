@@ -9,24 +9,24 @@
 
 //constructor
 Autobot::Autobot():
-	Transformer(), leader_("not leader"), rescues_(0) {};
+	Transformer(), leader_("not leader"), rescues_(0) {}
 Autobot::Autobot(const std::string& name):
-        Transformer(name), leader_("not leader"), rescues_(0) {};
+        Transformer(name), leader_("not leader"), rescues_(0) {}
 Autobot::Autobot(const std::string& name, int strength):
-        Transformer(name, strength), leader_("not leader"), rescues_(0) {};
+        Transformer(name, strength), leader_("not leader"), rescues_(0) {}
 Autobot::Autobot(const std::string& name, int strength, int speed):
-	Transformer(name, strength, speed), leader_("not leader"), rescues_(0) {};
+	Transformer(name, strength, speed), leader_("not leader"), rescues_(0) {}
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo):
-	Transformer(name, strength, speed, ammo), leader_("not leader"), rescues_(0) {};
+	Transformer(name, strength, speed, ammo), leader_("not leader"), rescues_(0) {}
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
 		Vehicle* vehicle):
-	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_("not leader"), rescues_(0) {};
+	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_("not leader"), rescues_(0) {}
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
 		Vehicle* vehicle, const std::string& leader):
-	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_(leader), rescues_(0) {};
+	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_(leader), rescues_(0) {}
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
 		Vehicle* vehicle, const std::string& leader, int rescues):
-	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_(leader), rescues_(rescues) {};
+	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_(leader), rescues_(rescues) {}
 
 //output
 std::ostream& operator<<(std::ostream& os, const Autobot& a) {
@@ -43,11 +43,11 @@ std::ostream& operator<<(std::ostream& os, const Autobot& a) {
 }
 
 //getters
-std::string Autobot::GetLeader() {
+std::string Autobot::GetLeader() const {
 	return leader_;
 }
 
-int Autobot::GetRescues() {
+int Autobot::GetRescues() const {
 	return rescues_;
 }
 

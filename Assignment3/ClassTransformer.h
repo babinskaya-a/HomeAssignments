@@ -34,12 +34,12 @@ class Transformer {
 		friend std::ostream& operator<<(std::ostream& os, const Transformer& t); //output
 
                //getters
-                std::string GetName();
-		int GetStrength();
-		int GetSpeed();
-		bool GetAmmo();
-		const Weapon& GetWeapon();
-		const Vehicle* GetVehicle();
+                std::string GetName() const;
+		int GetStrength() const;
+		int GetSpeed() const;
+		bool GetAmmo() const;
+		const Weapon& GetWeapon() const;
+		const Vehicle* GetVehicle() const;
 
 		//setters
 		void SetName(const std::string& name);

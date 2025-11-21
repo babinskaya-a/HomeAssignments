@@ -27,8 +27,8 @@ class Autobot : public Transformer {
 		friend std::ostream& operator<<(std::ostream& os, const Autobot& a);
 
 		//getters
-		std::string GetLeader();
-		int GetRescues();
+		std::string GetLeader() const;
+		int GetRescues() const;
 
 		//setters
 		void SetLeader(const std::string& leader);

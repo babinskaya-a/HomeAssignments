@@ -39,33 +39,33 @@ std::ostream& operator<<(std::ostream& os, const Transformer& t) {
 	<< ", strength:" << t.strength_
 	<< ", speed:" << t.speed_
 	<< ", ammo:" << t.ammo_
-	<< ", weapon:" << t.GetWeapon()
-	<< ", vehicle:" << t.GetVehicle() << "\n";
+	<< ", weapon:" << t.weapon_
+	<< ", vehicle:" << *t.vehicle_;
 	return os;
 }
 
 //getters
-std::string Transformer::GetName() {
+std::string Transformer::GetName() const {
 	return name_;
 }
 
-int Transformer::GetStrength() {
+int Transformer::GetStrength() const {
 	return strength_;
 }
 
-int Transformer::GetSpeed() {
+int Transformer::GetSpeed() const {
         return speed_;
 }
 
-bool Transformer::GetAmmo() {
+bool Transformer::GetAmmo() const {
         return ammo_;
 }
 
-const Weapon& Transformer::GetWeapon() {
+const Weapon& Transformer::GetWeapon() const {
 	return weapon_;
 }
 
-const Vehicle* Transformer::GetVehicle() {
+const Vehicle* Transformer::GetVehicle() const {
 	return vehicle_;
 }
 
