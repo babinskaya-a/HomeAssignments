@@ -34,7 +34,7 @@ TEST(MiniconTest, SetSizeTest) {
         EXPECT_EQ(m.GetSize(), 70);
 }
 
-TEST(MiniconTest, SetSizeTest) {
+TEST(MiniconTest, SetAgilityTest) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
         Minicon m("Fixit", 1000, 200, true, weapon, &vehicle, 60, 100);
@@ -74,19 +74,17 @@ TEST(MiniconTest, Helping) {
 //constructor tests
 
 TEST(MiniconConstructorTest, ConstructorTestEmpty) {
-        Weapon weapon("laser", 150);
-        Vehicle vehicle("jet", "red");
-        Minicon m();
+        Minicon m;
         EXPECT_EQ(m.GetName(), "Unknown");
 	EXPECT_EQ(m.GetStrength(), 0);
 	EXPECT_EQ(m.GetSpeed(), 0);
 	EXPECT_FALSE(m.GetAmmo());
 	EXPECT_EQ(m.GetWeapon().GetName(), "laser");
-	EXPECT_EQ(m.GetVehicle()->GetType(), "jet");
-	EXPECT_EQ(m.GetWeapon().GetPower(), 150);
+	EXPECT_EQ(m.GetVehicle()->GetType(), "car");
+	EXPECT_EQ(m.GetWeapon().GetPower(), 100);
 	EXPECT_EQ(m.GetVehicle()->GetColor(), "red");
 	EXPECT_EQ(m.GetSize(), 50);
-	EXPECT_EG(m.GetAgility(), 30);
+	EXPECT_EQ(m.GetAgility(), 30);
 }
 
 TEST(MiniconConstructorTest, ConstructorTestWithoutOneParameter) {
@@ -102,13 +100,13 @@ TEST(MiniconConstructorTest, ConstructorTestWithoutOneParameter) {
         EXPECT_EQ(m.GetWeapon().GetPower(), 150);
         EXPECT_EQ(m.GetVehicle()->GetColor(), "red");
         EXPECT_EQ(m.GetSize(), 60);
-        EXPECT_EG(m.GetAgility(), 30);
+        EXPECT_EQ(m.GetAgility(), 30);
 }
 
 TEST(MiniconConstructorTest, ConstructorTest) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Miniocon m("Fixit", 1000, 200, true, weapon, &vehicle, 60, 100);
+        Minicon m("Fixit", 1000, 200, true, weapon, &vehicle, 60, 100);
         EXPECT_EQ(m.GetName(), "Fixit");
         EXPECT_EQ(m.GetStrength(), 1000);
         EXPECT_EQ(m.GetSpeed(), 200);
@@ -118,5 +116,5 @@ TEST(MiniconConstructorTest, ConstructorTest) {
         EXPECT_EQ(m.GetWeapon().GetPower(), 150);
         EXPECT_EQ(m.GetVehicle()->GetColor(), "red");
         EXPECT_EQ(m.GetSize(), 60);
-        EXPECT_EG(m.GetAgility(), 100);
+        EXPECT_EQ(m.GetAgility(), 100);
 }

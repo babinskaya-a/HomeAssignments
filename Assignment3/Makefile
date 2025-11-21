@@ -5,7 +5,7 @@ LIBS = -lgtest -lgtest_main
 PROJECT = test_check
 
 SRCS = main.cpp ClassTransformer.cpp ClassAutobot.cpp ClassDecepticon.cpp ClassMinicon.cpp ClassWeapon.cpp ClassVehicle.cpp
-TEST_SRCS = test_transformer.cpp test_autobot.cpp test_decepticon.cpp test_minicon.cpp
+TEST_SRCS = test_transformer.cpp test_autobot.cpp test_decepticon.cpp test_minicon.cpp ClassTransformer.cpp ClassAutobot.cpp ClassDecepticon.cpp ClassMinicon.cpp ClassWeapon.cpp ClassVehicle.cpp
 HEADERS = ClassTransformer.h ClassAutobot.h ClassDecepticon.h ClassMinicon.h ClassWeapon.h ClassVehicle.h
 
 OBJS = $(SRCS:.cpp=.o)

@@ -8,7 +8,7 @@
 #include "ClassTransformer.h"
 #include "ClassWeapon.h"
 #include "ClassVehicle.h"
-
+#include "ClassAutobot.h"
 
 //getters and setters
 TEST(TransformerTest, GetSet) {
@@ -64,7 +64,7 @@ TEST(TransformTest, FireMethodTest) {
 TEST(TransformerConstructorTest, ConstructorTestEmpty) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Autobot t();
+        Autobot t;
         EXPECT_EQ(t.GetName(), "Unknown");
         EXPECT_EQ(t.GetStrength(), 0);
         EXPECT_EQ(t.GetSpeed(), 0);
@@ -84,7 +84,7 @@ TEST(TransformerConstructorTest, ConstructorTestWithoutOneParameter) {
         EXPECT_EQ(t.GetWeapon().GetName(), "laser");
         EXPECT_EQ(t.GetVehicle()->GetType(), "jet");
         EXPECT_EQ(t.GetWeapon().GetPower(), 100);
-	EXPECT_EQ(t.GetVehicle().->GetColor(), "red");
+	EXPECT_EQ(t.GetVehicle()->GetColor(), "red");
 }
 
 TEST(TransformerConstructorTest, ConstructorTest) {

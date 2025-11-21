@@ -75,24 +75,22 @@ TEST(AutobotTest, HumanProtection) {
 
 //constructor tests
 TEST(AutobotConstructorTest, ConstructorTestEmpty) {
-        Weapon weapon("laser", 150);
-        Vehicle vehicle("jet", "red");
-        Autobot a();
+        Autobot a;
         EXPECT_EQ(a.GetName(), "Unknown");
 	EXPECT_EQ(a.GetStrength(), 0);
 	EXPECT_EQ(a.GetSpeed(), 0);
 	EXPECT_FALSE(a.GetAmmo());
 	EXPECT_EQ(a.GetWeapon().GetName(), "laser");
-	EXPECT_EQ(a.GetVehicle()->GetType(), "jet");
-	EXPECT_EQ(a.GetWeapon().GetPower(), 150);
+	EXPECT_EQ(a.GetVehicle()->GetType(), "car");
+	EXPECT_EQ(a.GetWeapon().GetPower(), 100);
 	EXPECT_EQ(a.GetVehicle()->GetColor(), "red");
 	EXPECT_EQ(a.GetLeader(), "not leader");
-	EXPECT_EG(a.GetRescues(), 0);
+	EXPECT_EQ(a.GetRescues(), 0);
 }
 
-TEST(AutoBotConstructorTest, ConstructorTestWithoutOneParameter) {
+TEST(AutobotConstructorTest, ConstructorTestWithoutOneParameter) {
         Weapon weapon("laser", 150);
-        Vehicle vehicle("jet", "red");
+	Vehicle vehicle("jet", "red");
         Autobot a("Optimus Prime", 1000, 200, true, weapon, &vehicle, "leader");
         EXPECT_EQ(a.GetName(), "Optimus Prime");
         EXPECT_EQ(a.GetStrength(), 1000);
@@ -103,7 +101,7 @@ TEST(AutoBotConstructorTest, ConstructorTestWithoutOneParameter) {
         EXPECT_EQ(a.GetWeapon().GetPower(), 150);
         EXPECT_EQ(a.GetVehicle()->GetColor(), "red");
         EXPECT_EQ(a.GetLeader(), "leader");
-        EXPECT_EG(a.GetRescues(), 0);
+        EXPECT_EQ(a.GetRescues(), 0);
 }
 
 TEST(AutobotConstructorTest, ConstructorTest) {
@@ -119,5 +117,5 @@ TEST(AutobotConstructorTest, ConstructorTest) {
         EXPECT_EQ(a.GetWeapon().GetPower(), 150);
         EXPECT_EQ(a.GetVehicle()->GetColor(), "red");
         EXPECT_EQ(a.GetLeader(), "leader");
-        EXPECT_EG(a.GetRescues(), 100);
+        EXPECT_EQ(a.GetRescues(), 100);
 }

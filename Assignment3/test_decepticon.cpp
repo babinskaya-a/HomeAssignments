@@ -1,7 +1,7 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignmnent3
+* Assignmnent4
 */
 
 #include <gtest/gtest.h>
@@ -45,21 +45,21 @@ TEST(DecepticonTest, SetKillsTest) {
 TEST(DecepticonTest, MethodTransforTest) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Decepticon("Megatron", 1000, 200, true, weapon, &vehicle, true, 100);
+        Decepticon d("Megatron", 1000, 200, true, weapon, &vehicle, true, 100);
         EXPECT_EQ(d.Transform(), "Decepticon::Transform() from ClassDecepticon");
 }
 
 TEST(DecepticonTest, MethodSpeakTest) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Decepticon("Megatron", 1000, 200, true, weapon, &vehicle, true, 100);
+        Decepticon d("Megatron", 1000, 200, true, weapon, &vehicle, true, 100);
         EXPECT_EQ(d.Speak(), "Decepticon::Speak() from ClassDecepticon");
 }
 
 TEST(DecepticonTest, MethodFireTest) {
         Weapon weapon("laser", 150);
         Vehicle vehicle("jet", "red");
-        Decepticon("Megatron", 1000, 200, true, weapon, &vehicle, true, 100);
+        Decepticon d("Megatron", 1000, 200, true, weapon, &vehicle, true, 100);
         EXPECT_EQ(d.Fire(), "Decepticon::Fire() from ClassDecepticon");
 }
 
@@ -74,19 +74,17 @@ TEST(DecepticonTest, Destraction) {
 //costructor tests
 
 TEST(DecepticonConstructorTest, ConstructorTestEmpty) {
-        Weapon weapon("laser", 150);
-        Vehicle vehicle("jet", "red");
-        Decepticon d();
+        Decepticon d;
         EXPECT_EQ(d.GetName(), "Unknown");
         EXPECT_EQ(d.GetStrength(), 0);
         EXPECT_EQ(d.GetSpeed(), 0);
         EXPECT_FALSE(d.GetAmmo());
         EXPECT_EQ(d.GetWeapon().GetName(), "laser");
-        EXPECT_EQ(d.GetVehicle()->GetType(), "jet");
-        EXPECT_EQ(d.GetWeapon().GetPower(), 150);
+        EXPECT_EQ(d.GetVehicle()->GetType(), "car");
+        EXPECT_EQ(d.GetWeapon().GetPower(), 100);
         EXPECT_EQ(d.GetVehicle()->GetColor(), "red");
         EXPECT_FALSE(d.GetDangerous());
-        EXPECT_EG(d.GetKills(), 0);
+        EXPECT_EQ(d.GetKills(), 0);
 }
 
 TEST(DecepticonConstructorTest, ConstructorTestWithoutOneParameter) {
@@ -100,8 +98,8 @@ TEST(DecepticonConstructorTest, ConstructorTestWithoutOneParameter) {
         EXPECT_EQ(d.GetWeapon().GetName(), "laser");
         EXPECT_EQ(d.GetWeapon().GetPower(), 150);
         EXPECT_EQ(d.GetVehicle()->GetColor(), "red");
-        EXPECT_TRUE(d.GetLeader());
-        EXPECT_EG(d.GetKills(), 0);
+        EXPECT_TRUE(d.GetDangerous());
+        EXPECT_EQ(d.GetKills(), 0);
 }
 
 TEST(DecepticonConstructorTest, ConstructorTest) {
@@ -117,6 +115,6 @@ TEST(DecepticonConstructorTest, ConstructorTest) {
         EXPECT_EQ(d.GetWeapon().GetPower(), 150);
         EXPECT_EQ(d.GetVehicle()->GetColor(), "red");
         EXPECT_TRUE(d.GetDangerous());
-        EXPECT_EG(d.GetKills(), 100);
+        EXPECT_EQ(d.GetKills(), 100);
 }
 
