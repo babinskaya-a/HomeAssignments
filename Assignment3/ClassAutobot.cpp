@@ -36,9 +36,9 @@ std::ostream& operator<<(std::ostream& os, const Autobot& a) {
         << ", speed:" << a.GetSpeed()
         << ", ammo:" << a.GetAmmo()
         << ", weapon:" << a.GetWeapon()
-        << ", vehicle:" << a.GetVehicle()
-        << ", size:" << a.GetLeader()
-        << ", agility:" << a.GetRescues << "\n";
+        << ", vehicle:" << *a.GetVehicle()
+        << ", leader:" << a.GetLeader()
+        << ", rescues:" << a.GetRescues();
         return os;
 }
 

@@ -27,8 +27,8 @@ class Decepticon : public Transformer {
 		friend std::ostream& operator<<(std::ostream& os, const Decepticon& d);
 
 		//getters
-		bool GetDangerous();
-		int GetKills();
+		bool GetDangerous() const;
+		int GetKills() const;
 
 		//setters
 		void SetDangerous(bool dangerous);

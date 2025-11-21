@@ -27,8 +27,8 @@ class Minicon : public Transformer{
 		friend std::ostream& operator<<(std::ostream& os, const Minicon& m); //output
 
 		//getter
-		int GetSize();
-		int GetAgility();
+		int GetSize() const;
+		int GetAgility() const;
 
 		//setter
 		void SetSize(int size);
