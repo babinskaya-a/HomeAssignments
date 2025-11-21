@@ -4,7 +4,7 @@
 * Assignment4
 */
 
-#include "ClassDecepticon.h"
+#include "Decepticon.h"
 #include <iostream>
 
 //constructors
@@ -66,15 +66,15 @@ std::string Decepticon::Destroy() {
 }
 
 std::string Decepticon::Transform() {
-	return "Decepticon::Transform() from ClassDecepticon";
+	return "Decepticon::Transform() from Decepticon";
 }
 
 std::string Decepticon::Speak() {
-	return "Decepticon::Speak() from ClassDecepticon";
+	return "Decepticon::Speak() from Decepticon";
 }
 
 std::string Decepticon::Fire() {
-	return "Decepticon::Fire() from ClassDecepticon";
+	return "Decepticon::Fire() from Decepticon";
 }
 
 

@@ -4,7 +4,7 @@
 * Assignment4
 */
 
-#include "ClassAutobot.h"
+#include "Autobot.h"
 #include <iostream>
 
 //constructor
@@ -66,13 +66,13 @@ std::string Autobot::ProtectHumans() {
 }
 
 std::string Autobot::Transform() {
-	return "Autobot::Transform() from ClassAutobot\n";
+	return "Autobot::Transform() from Autobot\n";
 }
 
 std::string Autobot::Speak() {
-	return "Autobot::Speak() from ClassAutobot\n";
+	return "Autobot::Speak() from Autobot\n";
 }
 
 std::string Autobot::Fire() {
-	return "Autobot::Fire() from ClassAutobot\n";
+	return "Autobot::Fire() from Autobot\n";
 }

@@ -5,10 +5,10 @@
 */
 
 #include <gtest/gtest.h>
-#include "ClassTransformer.h"
-#include "ClassWeapon.h"
-#include "ClassVehicle.h"
-#include "ClassAutobot.h"
+#include "Transformer.h"
+#include "Weapon.h"
+#include "Vehicle.h"
+#include "Autobot.h"
 
 //getters and setters
 TEST(TransformerTest, GetSet) {

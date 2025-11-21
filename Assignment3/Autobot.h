@@ -7,7 +7,7 @@
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 
-#include "ClassTransformer.h"
+#include "Transformer.h"
 
 class Autobot : public Transformer {
 	public:
@@ -46,3 +46,4 @@ class Autobot : public Transformer {
 };
 
 #endif
+

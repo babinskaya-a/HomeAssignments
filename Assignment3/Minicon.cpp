@@ -4,7 +4,7 @@
 * Assignment4
 */
 
-#include "ClassMinicon.h"
+#include "Minicon.h"
 #include <iostream>
 
 //constructor
@@ -66,13 +66,13 @@ std::string Minicon::HelpAutobot() {
 }
 
 std::string Minicon::Transform() {
-	return "Minicon::Transform() from ClassMinicon";
+	return "Minicon::Transform() from Minicon";
 }
 
 std::string Minicon::Speak() {
-	return "Minicon::Speak() from ClassMinicon";
+	return "Minicon::Speak() from Minicon";
 }
 
 std::string Minicon::Fire() {
-	return "Minicon::Fire() from ClassMinicon";
+	return "Minicon::Fire() from Minicon";
 }

@@ -4,7 +4,7 @@
 * Assignment4
 */
 
-#include "ClassTransformer.h"
+#include "Transformer.h"
 
 //constructors
 Transformer::Transformer():
@@ -96,10 +96,10 @@ void Transformer::SetVehicle(Vehicle* vehicle) {
 
 //class methods
 std::string Transformer::Fire() {
-	return "Transformer::Fire() from ClassTransformer\n";
+	return "Transformer::Fire() from Transformer\n";
 }
 
 std::string Transformer::Speak() {
-	return "Transfomer::Speak() from ClassTransformer\n";
+	return "Transfomer::Speak() from Transformer\n";
 }
 

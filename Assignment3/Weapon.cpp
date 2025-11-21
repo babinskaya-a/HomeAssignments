@@ -4,7 +4,7 @@
 * Assignmnent4
 */
 
-#include "ClassWeapon.h"
+#include "Weapon.h"
 
 //constructor
 Weapon::Weapon(const std::string& name, int power): name_(name), power_(power) {}

@@ -4,10 +4,10 @@
 * Assignment4
 */
 
-#include "ClassTransformer.h"
-#include "ClassAutobot.h"
-#include "ClassDecepticon.h"
-#include "ClassMinicon.h"
+#include "Transformer.h"
+#include "Autobot.h"
+#include "Decepticon.h"
+#include "Minicon.h"
 #include <iostream>
 #include <vector>
 
