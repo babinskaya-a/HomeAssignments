@@ -7,7 +7,7 @@
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
 
-#include "ClassTransformer.h"
+#include "Transformer.h"
 
 class Decepticon : public Transformer {
 	public:

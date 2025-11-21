@@ -4,7 +4,7 @@
 * Assignment3
 */
 
-#include "ClassAutobot.h"
+#include "Autobot.h"
 
 //constructor
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo,

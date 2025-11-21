@@ -4,7 +4,7 @@
 * Assignment3
 */
 
-#include "ClassVehicle.h"
+#include "Vehicle.h"
 
 //constructor
 Vehicle::Vehicle(const std::string& type, const std::string& color):

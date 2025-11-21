@@ -5,9 +5,9 @@
 */
 
 #include <gtest/gtest.h>
-#include "ClassAutobot.h"
-#include "ClassWeapon.h"
-#include "ClassVehicle.h"
+#include "Autobot.h"
+#include "Weapon.h"
+#include "Vehicle.h"
 
 TEST(AutobotTest, GetSet) {
 	Weapon weapon("laser", 150);

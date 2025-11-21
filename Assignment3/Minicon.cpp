@@ -4,7 +4,7 @@
 * Assignment3
 */
 
-#include "ClassMinicon.h"
+#include "Minicon.h"
 
 //constructor
 Minicon::Minicon(const std::string& name, int strength, int speed, bool ammo,

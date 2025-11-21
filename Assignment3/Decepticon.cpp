@@ -4,7 +4,7 @@
 * Assignment3
 */
 
-#include "ClassDecepticon.h"
+#include "Decepticon.h"
 
 //constructor
 Decepticon::Decepticon(const std::string& name, int strength, int speed, bool ammo,

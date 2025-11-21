@@ -7,7 +7,7 @@
 #ifndef MINICON_H
 #define MINICON_H
 
-#include "ClassTransformer.h"
+#include "Transformer.h"
 
 class Minicon : public Transformer{
 	public:

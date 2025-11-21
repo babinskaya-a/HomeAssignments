@@ -4,7 +4,7 @@
 * Assignment3
 */
 
-#include "ClassTransformer.h"
+#include "Transformer.h"
 
 //constructor
 Transformer::Transformer(const std::string& name, int strength, int speed,

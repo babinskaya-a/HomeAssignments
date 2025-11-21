@@ -5,9 +5,9 @@
 */
 
 #include <gtest/gtest.h>
-#include "ClassTransformer.h"
-#include "ClassWeapon.h"
-#include "ClassVehicle.h"
+#include "Transformer.h"
+#include "Weapon.h"
+#include "Vehicle.h"
 
 TEST(TransformerTest, GetSet) {
 	Weapon weapon("laser", 150);

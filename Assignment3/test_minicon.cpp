@@ -5,9 +5,9 @@
 */
 
 #include <gtest/gtest.h>
-#include "ClassMinicon.h"
-#include "ClassWeapon.h"
-#include "ClassVehicle.h"
+#include "Minicon.h"
+#include "Weapon.h"
+#include "Vehicle.h"
 
 TEST(MiniconTest, GetSet) {
 	Weapon weapon("laser", 150);
