@@ -19,7 +19,7 @@ TEST(TransformerTest, GetSet) {
 	EXPECT_EQ(t.GetName(), "Optimus Prime");
 	EXPECT_EQ(t.GetStrength(), 1000);
 	EXPECT_EQ(t.GetSpeed(), 200);
-	EXPECT_EQ(t.GetAmmo(), true);
+	EXPECT_TRUE(t.GetAmmo());
 	EXPECT_EQ(t.GetWeapon().GetName(), "laser");
 	EXPECT_EQ(t.GetVehicle()->GetType(), "jet");
 	EXPECT_EQ(t.GetWeapon().GetPower(), 150);
@@ -36,13 +36,11 @@ TEST(TransformerTest, GetSet) {
 	EXPECT_EQ(t.GetName(), "Optimus");
 	EXPECT_EQ(t.GetStrength(), 1500);
 	EXPECT_EQ(t.GetSpeed(), 500);
-	EXPECT_EQ(t.GetAmmo(), false);
+	EXPECT_FALSE(t.GetAmmo());
 	EXPECT_EQ(t.GetWeapon().GetName(), "laser");
 	EXPECT_EQ(t.GetVehicle()->GetType(), "car");
 	EXPECT_EQ(t.GetWeapon().GetPower(), 250);
 	EXPECT_EQ(t.GetVehicle()->GetColor(), "green");
-
-
 }
 
 //class method

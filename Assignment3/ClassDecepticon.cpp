@@ -65,16 +65,16 @@ std::string Decepticon::Destroy() {
 	return "everything destroyed";
 }
 
-void Decepticon::Transform() {
-	std::cout << "Decepticon::Transform() from ClassDecepticon";
+std::string Decepticon::Transform() {
+	return "Decepticon::Transform() from ClassDecepticon";
 }
 
-void Decepticon::Speak() {
-	std::cout << "Decepticon::Speak() from ClassDecepticon";
+std::string Decepticon::Speak() {
+	return "Decepticon::Speak() from ClassDecepticon";
 }
 
-void Decepticon::Fire() {
-	std::cout << "Decepticon::Fire() from ClassDecepticon";
+std::string Decepticon::Fire() {
+	return "Decepticon::Fire() from ClassDecepticon";
 }
 
 

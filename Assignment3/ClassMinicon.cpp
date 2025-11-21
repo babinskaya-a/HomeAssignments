@@ -65,14 +65,14 @@ std::string Minicon::HelpAutobot() {
 	return "help has been provided";
 }
 
-void Minicon::Transform() {
-	std::cout << "Minicon::Transform() from ClassMinicon";
+std::string Minicon::Transform() {
+	return "Minicon::Transform() from ClassMinicon";
 }
 
-void Minicon::Speak() {
-	std::cout << "Minicon::Speak() from ClassMinicon";
+std::string Minicon::Speak() {
+	return "Minicon::Speak() from ClassMinicon";
 }
 
-void Minicon::Fire() {
-	std::cout << "Minicon::Fire() from ClassMinicon";
+std::string Minicon::Fire() {
+	return "Minicon::Fire() from ClassMinicon";
 }

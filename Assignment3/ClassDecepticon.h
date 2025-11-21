@@ -36,9 +36,9 @@ class Decepticon : public Transformer {
 
 		//class method
 		std::string Destroy();
-		void Transform() override;
-		void Speak() override;
-		void Fire() override;
+		std::string Transform() override;
+		std::string Speak() override;
+		std::string Fire() override;
 
 	private:
 		bool dangerous_;

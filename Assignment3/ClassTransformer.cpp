@@ -95,11 +95,11 @@ void Transformer::SetVehicle(Vehicle* vehicle) {
 }
 
 //class methods
-void Transformer::Fire() {
-	std::cout << "Transformer::Fire() from ClassTransformer\n";
+std::string Transformer::Fire() {
+	return "Transformer::Fire() from ClassTransformer\n";
 }
 
-void Transformer::Speak() {
-	std::cout << "Transfomer::Speak() from ClassTransformer\n";
+std::string Transformer::Speak() {
+	return "Transfomer::Speak() from ClassTransformer\n";
 }
 

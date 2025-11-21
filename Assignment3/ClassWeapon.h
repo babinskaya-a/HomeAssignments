@@ -8,6 +8,7 @@
 #define WEAPON_H
 
 #include <string>
+#include <ostream>
 
 class Weapon {
 	public:

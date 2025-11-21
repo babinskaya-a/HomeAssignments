@@ -50,9 +50,9 @@ class Transformer {
 		void SetVehicle(Vehicle* vehicle);
 
 		//class methods
-		virtual void Transform() = 0; //puerly virtual method
-		virtual void Fire();
-		virtual void Speak();
+		virtual std::string Transform() = 0; //puerly virtual method
+		virtual std::string Fire();
+		virtual std::string Speak();
 
         private:
                 std::string name_;

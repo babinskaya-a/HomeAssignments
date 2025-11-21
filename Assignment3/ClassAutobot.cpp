@@ -65,14 +65,14 @@ std::string Autobot::ProtectHumans() {
 	return "humans protected";
 }
 
-void Autobot::Transform() {
-	std::cout << "Autobot::Transform() from ClassAutobot\n";
+std::string Autobot::Transform() {
+	return "Autobot::Transform() from ClassAutobot\n";
 }
 
-void Autobot::Speak() {
-	std::cout << "Autobot::Speak() from ClassAutobot\n";
+std::string Autobot::Speak() {
+	return "Autobot::Speak() from ClassAutobot\n";
 }
 
-void Autobot::Fire() {
-	std::cout << "Autobot::Fire() from ClassAutobot\n";
+std::string Autobot::Fire() {
+	return "Autobot::Fire() from ClassAutobot\n";
 }

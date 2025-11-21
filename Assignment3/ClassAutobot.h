@@ -36,9 +36,9 @@ class Autobot : public Transformer {
 
 		//class method
 		std::string ProtectHumans();
-		void Transform() override;
-		void Speak() override;
-		void Fire() override;
+		std::string Transform() override;
+		std::string Speak() override;
+		std::string Fire() override;
 
 	private:
 		std::string leader_;

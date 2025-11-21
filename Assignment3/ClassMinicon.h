@@ -36,9 +36,9 @@ class Minicon : public Transformer{
 
 		//class method
 		std::string HelpAutobot();
-		void Transform() override;
-		void Speak() override;
-		void Fire() override;
+		std::string Transform() override;
+		std::string Speak() override;
+		std::string Fire() override;
 
 	private:
 		int size_;

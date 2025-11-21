@@ -8,6 +8,7 @@
 #define VEHICLE_H
 
 #include <string>
+#include <ostream>
 
 class Vehicle {
 	public:
