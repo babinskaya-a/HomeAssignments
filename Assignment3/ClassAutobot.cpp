@@ -5,34 +5,41 @@
 */
 
 #include "ClassAutobot.h"
+#include <iostream>
 
 //constructor
 Autobot::Autobot():
-	Transformer(), leader_("not leader"), rescues(0) {};
+	Transformer(), leader_("not leader"), rescues_(0) {};
 Autobot::Autobot(const std::string& name):
-        Transformer(name), leader_("not leader"), rescues(0) {};
+        Transformer(name), leader_("not leader"), rescues_(0) {};
 Autobot::Autobot(const std::string& name, int strength):
-        Transformer(name, strength), leader_("not leader"), rescues(0) {};
+        Transformer(name, strength), leader_("not leader"), rescues_(0) {};
 Autobot::Autobot(const std::string& name, int strength, int speed):
-	Transformer(name, strength, speed), leader_("not leader"), rescues(0) {};
+	Transformer(name, strength, speed), leader_("not leader"), rescues_(0) {};
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo):
-	Transformer(name, strength, speed, ammo), leader_("not leader"), rescues(0) {};
+	Transformer(name, strength, speed, ammo), leader_("not leader"), rescues_(0) {};
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
 		Vehicle* vehicle):
-	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_("not leader"), rescues(0) {};
+	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_("not leader"), rescues_(0) {};
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
 		Vehicle* vehicle, const std::string& leader):
-	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_(leader), rescues(0) {};
+	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_(leader), rescues_(0) {};
 Autobot::Autobot(const std::string& name, int strength, int speed, bool ammo, const Weapon& weapon,
 		Vehicle* vehicle, const std::string& leader, int rescues):
 	Transformer(name, strength, speed, ammo, weapon, vehicle), leader_(leader), rescues_(rescues) {};
 
 //output
 std::ostream& operator<<(std::ostream& os, const Autobot& a) {
-	os << "name:" << a.name_ << ", strength:" << a.strength_ << ", speed:" << a.speed_
-	<< ", ammo:" << a.ammo_ << ", weapon:" << a.weapon_ << ", vehicle:" << a.vehicle_
-	<< ", leader:" << a.leader_ << ", rescues:" << a.rescues_ << "\n";
-	return os;
+	os << "Autobot: "
+        << "name:" << a.GetName()
+        << ", strength:" << a.GetStrength()
+        << ", speed:" << a.GetSpeed()
+        << ", ammo:" << a.GetAmmo()
+        << ", weapon:" << a.GetWeapon()
+        << ", vehicle:" << a.GetVehicle()
+        << ", size:" << a.GetLeader()
+        << ", agility:" << a.GetRescues << "\n";
+        return os;
 }
 
 //getters
@@ -63,7 +70,7 @@ void Autobot::Transform() {
 }
 
 void Autobot::Speak() {
-	syd::cout << "Autobot::Speak() from ClassAutobot\n";
+	std::cout << "Autobot::Speak() from ClassAutobot\n";
 }
 
 void Autobot::Fire() {

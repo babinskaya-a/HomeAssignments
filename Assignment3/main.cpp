@@ -22,10 +22,11 @@ int main() {
 	std::vector<Transformer*> transformers = {&a, &d, &m};
 
 	for (Transformer* t : transformers) {
-		std::cout << *t << std::endl;
-		std::cout << t.Transform();
-		std::cout << t.Speak();
-		std::cout << t.Fire();
+		std::cout << *t;
+		t->Transform();
+		t->Speak();
+		t->Fire();
+		std::cout << "\n";
 	}
 	return 0;
 }

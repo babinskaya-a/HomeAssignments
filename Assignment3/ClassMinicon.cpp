@@ -5,6 +5,7 @@
 */
 
 #include "ClassMinicon.h"
+#include <iostream>
 
 //constructor
 Minicon::Minicon():
@@ -37,9 +38,15 @@ Minicon::Minicon(const std::string& name, int strength, int speed, bool ammo,
 
 //output
 std::ostream& operator<<(std::ostream& os, const Minicon& m) {
-	os << "name:" << m.name_ << ", strength:" << m.strength_ << ", speed:" << m.speed_
-	<< ", ammo:" << m.ammo_ << ", weapon:" << m.weapon_ << ", vehicle:" << m.vehicle_
-	<< ", size:" << m.size_ << ", agility:" << m.agility_ << "\n";
+	os << "Minicon:"
+	<< "name:" << m.GetName()
+	<< ", strength:" << m.GetStrength()
+	<< ", speed:" << m.GetSpeed()
+	<< ", ammo:" << m.GetAmmo()
+	<< ", weapon:" << m.GetWeapon()
+	<< ", vehicle:" << m.GetVehicle()
+	<< ", size:" << m.GetSize()
+	<< ", agility:" << m.GetAgility << "\n";
 	return os;
 }
 
@@ -66,7 +73,7 @@ std::string Minicon::HelpAutobot() {
 	return "help has been provided";
 }
 
-void Minicon::Transfrom() {
+void Minicon::Transform() {
 	std::cout << "Minicon::Transform() from ClassMinicon";
 }
 

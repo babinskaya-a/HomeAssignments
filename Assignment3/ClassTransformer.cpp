@@ -9,31 +9,38 @@
 //constructors
 Transformer::Transformer():
 		name_("Unknown"), strength_(0), speed_(0),ammo_(false),
-		weapon_("laser", 100), vehicle_("car", "red") {};
+		weapon_("laser", 100), vehicle_(new Vehicle("car", "red")) {}
 Transformer::Transformer(const std::string& name):
 		name_(name), strength_(0), speed_(0), ammo_(false),
-		weapon_("laser", 100), vehicle_("car", "red") {};
+		weapon_("laser", 100), vehicle_(new Vehicle ("car", "red")) {}
 Transformer::Transformer(const std::string& name, int strength):
 		name_(name), strength_(strength), speed_(0), ammo_(false),
-		weapon_("laser", 100), vehicle_("car", "red") {};
+		weapon_("laser", 100), vehicle_(new Vehicle("car", "red")) {}
 Transformer::Transformer(const std::string& name, int strength, int speed):
                 name_(name), strength_(strength), speed_(speed),
-                ammo_(false), weapon_("laser", 100), vehicle_("car", "red") {};
+                ammo_(false), weapon_("laser", 100), vehicle_(new Vehicle("car", "red")) {}
 Transformer::Transformer(const std::string& name, int strength, int speed, bool ammo):
 		name_(name), strength_(strength), speed_(speed), ammo_(ammo),
-		weapon_("laser", 100), vehicle_("car", "red") {};
+		weapon_("laser", 100), vehicle_(new Vehicle("car", "red")) {}
 Transformer::Transformer(const std::string& name, int strength, int speed, bool ammo,
 		const Weapon& weapon, Vehicle* vehicle):
 		name_(name), strength_(strength), speed_(speed), ammo_(ammo),
-		weapon_(weapon), vehicle_(vehicle) {};
+		weapon_(weapon), vehicle_(vehicle) {}
 
 //destrudtor
-Transformer::~Transformer() {};
+Transformer::~Transformer() {
+	delete vehicle_;
+}
 
 //output
 std::ostream& operator<<(std::ostream& os, const Transformer& t) {
-	os << "name:" << t.name_ << ", strength:" << t.strength_ << ", speed:" << t.speed_
-	<< ", ammo:" << t.ammo_ << ", weapon:" << t.weapon_ << ", vehicle:" << *(t.vehicle_) << "\n";
+	os << "Transformer: "
+	<< "name:" << t.name_
+	<< ", strength:" << t.strength_
+	<< ", speed:" << t.speed_
+	<< ", ammo:" << t.ammo_
+	<< ", weapon:" << t.GetWeapon()
+	<< ", vehicle:" << t.GetVehicle() << "\n";
 	return os;
 }
 
@@ -54,11 +61,11 @@ bool Transformer::GetAmmo() {
         return ammo_;
 }
 
-Weapon& Transformer::GetWeapon() {
+const Weapon& Transformer::GetWeapon() {
 	return weapon_;
 }
 
-Vehicle* Transformer::GetVehicle() {
+const Vehicle* Transformer::GetVehicle() {
 	return vehicle_;
 }
 

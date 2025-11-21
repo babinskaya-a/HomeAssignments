@@ -18,7 +18,7 @@ class Minicon : public Transformer{
 		Minicon(const std::string& name, int strength, int speed);
 		Minicon(const std::string& name, int strength, int speed, bool ammo);
 		Minicon(const std::string& name, int strength, int speed, bool ammo,
-                const Weapon& weapon, Vehicle* vehicle,);
+                const Weapon& weapon, Vehicle* vehicle);
 		Minicon(const std::string& name, int strength, int speed, bool ammo,
                 const Weapon& weapon, Vehicle* vehicle, int size);
 		Minicon(const std::string& name, int strength, int speed, bool ammo,

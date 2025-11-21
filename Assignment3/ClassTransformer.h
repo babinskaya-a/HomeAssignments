@@ -39,7 +39,7 @@ class Transformer {
 		int GetSpeed();
 		bool GetAmmo();
 		const Weapon& GetWeapon();
-		Vehicle* GetVehicle();
+		const Vehicle* GetVehicle();
 
 		//setters
 		void SetName(const std::string& name);

@@ -5,6 +5,7 @@
 */
 
 #include "ClassDecepticon.h"
+#include <iostream>
 
 //constructors
 Decepticon::Decepticon():
@@ -29,10 +30,16 @@ Decepticon::Decepticon(const std::string& name, int strength, int speed, bool am
 
 //output
 std::ostream& operator<<(std::ostream& os, const Decepticon& d) {
-	os << "name:" << d.name_ << ", strength:" << d.strength_ << ", speed:" << d.speed_
-	<< ", ammo:" << d.ammo_ << ", weapon:" << d.weapon_ << ", vehicle:" << d.vehicle_
-	<< ", dangerous:" << d.dangerous_ << ", kills:" << d.kills_ << "\n";
-	return os;
+        os << "Decepticon: "
+        << "name:" << d.GetName()
+        << ", strength:" << d.GetStrength()
+        << ", speed:" << d.GetSpeed()
+        << ", ammo:" << d.GetAmmo()
+        << ", weapon:" << d.GetWeapon()
+        << ", vehicle:" << d.GetVehicle()
+        << ", size:" << d.GetDangerous()
+        << ", agility:" << d.GetKills << "\n";
+        return os;
 }
 
 //getters
@@ -58,7 +65,7 @@ std::string Decepticon::Destroy() {
 	return "everything destroyed";
 }
 
-void Decepticon::Transfrom() {
+void Decepticon::Transform() {
 	std::cout << "Decepticon::Transform() from ClassDecepticon";
 }
 
