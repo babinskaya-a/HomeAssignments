@@ -1,14 +1,13 @@
 /*
 * Arina Babinskaya
 * st139880@student.spbu.ru
-* Assignment4
+* Assignment3
 */
 
 #ifndef WEAPON_H
 #define WEAPON_H
 
 #include <string>
-#include <ostream>
 
 class Weapon {
 	public:
@@ -16,15 +15,12 @@ class Weapon {
 		~Weapon(); //destructor
 
 		//getters
-		std::string GetName() const;
-		int GetPower() const;
+		std::string GetName();
+		int GetPower();
 
 		//setters
 		void SetName(const std::string& name);
 		void SetPower(int power);
-
-		//output
-		friend std::ostream& operator<<(std::ostream& os, const Weapon& weapon);
 
 	private:
 		std::string name_;
