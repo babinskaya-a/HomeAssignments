@@ -21,13 +21,12 @@ class Matrix {
 			: rows_(rows), cols_(cols), data_(rows * cols, value) {}
 		~Matrix() = default;
 
-		//checks if element is in bounds of the matrix
 		T& at(size_t r, size_t c) {
-			return data_[index(r, c)];
+			return data_[r*cols_ + c];
 		}
 
 		const T& at(size_t r, size_t c) const {
-			return data_[index(r, c)];
+			return data_[r*cols_ + c];
 		}
 
 		size_t rows() const { return rows_; }
@@ -58,7 +57,7 @@ class Matrix {
 				for (size_t j = 0; j < Matrix2.cols_; ++j) {
 					T sum = T(0);
 					for (size_t k = 0; k < cols_; ++k) {
-						sum +=  at(i, k) * Matrix2.at(k, j);
+						sum = sum + at(i, k) * Matrix2.at(k, j);
 					}
 					result.at(i, j) = sum;
 				}

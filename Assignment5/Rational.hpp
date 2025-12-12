@@ -10,7 +10,7 @@
 #include <cstdint>
 
 class Rational {
-	private;
+	private:
 		int64_t num_; //numirator
 		int64_t den_; //denominator
 
